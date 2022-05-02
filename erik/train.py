@@ -135,7 +135,7 @@ if __name__ == '__main__':
             print("Evaluation after episode", episode, ":", mean_return)
 
             with open("training_logs/" + args.env + ".log", 'a', encoding='utf-8') as f:
-                f.write('f{episode},{mean_return},{dqn.eps_last},{steps_episode}\n')
+                f.write(f'{episode},{mean_return},{dqn.eps_last},{steps_episode}\n')
 
             # Save current agent if it has the best performance so far.
             if mean_return >= best_mean_return:
